@@ -157,11 +157,9 @@ jobs:
           # if this is a forked PR, stop this step;
           # community contributors won't have perms to upload to our S3 bucket
 
-          if [[ $CIRCLE_PR_REPONAME == "circleci-images" ]]; then
-            echo "this is a forked PR; skipping rest of this step"
-            circleci step halt
-            exit 0
-          fi
+          circleci step halt
+          exit 0
+          
 
           cd ./shared/images; ./refresh-tools-cache
 
