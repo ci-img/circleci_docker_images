@@ -14,7 +14,7 @@ function repo_name() {
   echo "${NEW_ORG}/${repo_tag}"
 }
 
-REPO_NAME=registry.gitlab.com/mehulagg/$(repo_name)
+REPO_NAME=ghcr.io/ci-img/$(repo_name)
 
 IMAGE_NAME=${REPO_NAME}:$(cat TAG)
 
