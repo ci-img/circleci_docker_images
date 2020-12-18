@@ -183,7 +183,7 @@ jobs:
             if [[ $CIRCLE_PR_REPONAME == "circleci-images" ]]; then
               echo "this is a forked PR; skipping Docker login"
             else
-              docker login -u $DOCKER_USER -p $DOCKER_PASS registry.gitlab.com
+              docker login -u $DOCKER_USER -p $DOCKER_PASS ghcr.io
             fi
 
       - attach_workspace:
